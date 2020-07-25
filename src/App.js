@@ -1,13 +1,15 @@
 import React from 'react';
+import Logo from "./Logo.js";
+import BestPokemon from "./BestPokemon";
+import CaughtPokemon from "./CaughtPokemon";
 
 
 function App() {
   return (
   <div>
-  <header>
-    <h1> Welcome to the Pokedex </h1>
-    <img src ="https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png" alt ="images"></img>
-    </header>
+   <Logo/>
+   <BestPokemon/>
+   <CaughtPokemon/>
     </div>
     );
 }
