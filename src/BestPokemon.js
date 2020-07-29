@@ -5,11 +5,11 @@ const BestPokemon = (props) => {
  //  const abilities = ['Anticipation', 'Adaptability', 'Run-Away']
     return(
       <div>
-      <p>My favourite Pokemon is Pikachu</p>
+      <p>My favorite Pokemon is Pikachu</p>
       <ul>
-      {props.abilities.map((name) => {
-        return( // if there is no bracket after the return you must to write the code exactly after
-     <li>{name}</li>
+      {props.abilities.map((name, index) => {
+        return( 
+     <li key = {index}>{name}</li>
      )
       })}
     </ul>
@@ -17,3 +17,6 @@ const BestPokemon = (props) => {
     )}
 
     export default BestPokemon;
+
+
+    // if there is no bracket after the return you must to write the code exactly after it
