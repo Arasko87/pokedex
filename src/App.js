@@ -10,8 +10,7 @@ function App() {
     return console.log("This is a new message is a test of the onClick ");
     }
 
-
-  return (
+   return (
   <div>
    <Logo handleClick={logWhenClicked} appName="Pokedex"/>
    <BestPokemon abilities = {['Anticipation', 'Adaptability', 'Run-Away']}/>

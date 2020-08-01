@@ -8,8 +8,7 @@ const Logo = (props) =>{
     <header>
       <h1> Welcome to the {props.appName} </h1>
       <img onClick={props.handleClick} src ="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSYvLffuKqbWPk0NgQpFvlfDynzU9cS1sZYZw&usqp=CAU" alt ="pikachu" ></img>
-  
-      </header>
+    </header>
     )
   }
 

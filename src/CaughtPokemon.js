@@ -1,10 +1,17 @@
-import React from "react";
+import React,{useState} from "react";
 
 const CaughtPokemon = (props) =>{
-        // we have passed line 5 to App.j and we deleted from here
-    // const date = new Date().toLocaleDateString()
+
+  const [totalNumber, setCount] = useState(0);
+  function incrementTotal() {
+    setCount(totalNumber + 1);
+  }
+
     return (
-      <p>Caught 0 Pokemon on {props.date}</p>
+      <div>
+      <p>Caught {totalNumber} Pokemon on {props.date}</p>
+      <button className="button" onClick = {incrementTotal}>Add a Pokemon</button>
+      </div>
     )
   }
 
