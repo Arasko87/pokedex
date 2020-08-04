@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const BestPokemon = (props) => {
-    // we have passed line 5 to App.j and we deleted from here
- //  const abilities = ['Anticipation', 'Adaptability', 'Run-Away']
-    return(
+
+function BestPokemonFetcher(){
+
+const [bestPokemon, setBestPokemon] = useState(null);
+
+useEffect(() => {
+    fetch(
+        "https://pokeapi.co/api/v2/pokemon/1/"
+    )
+    .then(result => result.json())
+    .then((data) => setBestPokemon(data));
+    
+}, []);
+
+
+  if (!bestPokemon){
+      return null;
+  } else{
+      return  <BestPokemon pokemon={bestPokemon}/>
+  }
+  }
+  
+  return(
       <div>
       <p>My favorite Pokemon is Pikachu</p>
       <ul>
